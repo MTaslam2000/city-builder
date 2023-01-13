@@ -33,3 +33,14 @@ header .logo {
 main {
     padding: 20px;
 }
+
+.images img {
+    height: 200px;
+    width: 200px;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
