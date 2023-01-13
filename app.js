@@ -4,17 +4,30 @@
 const roofDropdown = document.getElementById('roof-dropdowns'); 
 const roofImage = document.getElementById('roof-image');
 const roofCountEl = document.getElementById('roof-count');
+
+const materialsDropdown = document.getElementById('material-dropdowns');
+const materialsImage = document.getElementById('materials-image');
+const materialsCountEl = document.getElementById('material-count');
+
 const mottoButton = document.getElementById('motto-button');
 const mottoInputEl = document.getElementById('motto-input');
 const mottosEl = document.getElementById('mottos');
 /* State */
 let roofCount = 0;
+let materialsCount = 0;
+let doorsCount = 0;
 let mottos = ['Welcome to my home'];
 
 /* Events */
 roofDropdown.addEventListener('change', () => {
     roofImage.src = makeImageURL('roof', roofDropdown.value);
     roofCount++;
+    displayStats();
+});
+
+materialsDropdown.addEventListener('change', () => {
+    materialsImage.src = makeImageURL('materials', materialsDropdown.value);
+    materialsCount++;
     displayStats();
 });
 
@@ -31,6 +44,7 @@ function makeImageURL(location, value) {
 
 function displayStats() {
     roofCountEl.textContent = roofCount;
+    materialsCountEl.textContent = materialsCount;
 }
 
 function displayMottos() {
