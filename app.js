@@ -18,6 +18,12 @@ roofDropdown.addEventListener('change', () => {
     displayStats();
 });
 
+mottoButton.addEventListener('click', () => {
+    mottos.push(mottoInputEl.value);
+
+    displayMottos();
+});
+
 /* Display Functions */
 function makeImageURL(location, value) {
     return `assets/${location}-${value}.png`;
@@ -26,5 +32,17 @@ function makeImageURL(location, value) {
 function displayStats() {
     roofCountEl.textContent = roofCount;
 }
+
+function displayMottos() {
+    mottosEl.textContent = '';
+
+    for (let motto of mottos) {
+        const newElement = document.createElement('p');
+        newElement.classList.add('motto');
+        newElement.textContent = motto;
+        mottosEl.append(newElement);
+    }
+}
+
 
 // (don't forget to call any display functions you want to run on page load!)

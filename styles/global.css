@@ -33,3 +33,7 @@ header .logo {
 main {
     padding: 20px;
 }
+
+.images img {
+    width: 400px;
+}
