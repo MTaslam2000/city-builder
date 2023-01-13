@@ -32,19 +32,33 @@
 
     <main>
         <h1>Your Custom Home Builder</h1>
-        <div>
+        <section class="images">
+            <img id="roof-image">
+            <img id="materials-image">
+            <img id="doors-image">
+            <img>
+        </section>
+        <section id="mottos"></section>
+        <div class="roofs-list">
             <section>Roof</section>
-            <select>
-                <option></option>
-                <option></option>
-                <option></option>
+            
+            <select id="roof-dropdowns">
+                <option value="">Select Your Roof</option>
+                <option value="orange">Orange</option>
+                <option value="grey">Grey</option>
+                <option value="metal">Metal</option>
             </select>
+            <div>you changed your roof <span id="roof-count">0</span> times</div>
+        </div>
+        <div class="materials">
             <section>Material</section>
             <select>
                 <option></option>
                 <option></option>
                 <option></option>
             </select>
+        </div>
+        <div class="doors">
             <section>Doors</section>
             <select>
                 <option></option>
@@ -52,8 +66,10 @@
                 <option></option>
             </select>
         </div>
-        <input><button>Home Owners Motto</button>
-
+        <div class="button-and-input">
+            <input id="motto-input">
+            <button id="motto-button">Home Owners Motto</button>
+        </div>
 
     </main>
 
