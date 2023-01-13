@@ -9,6 +9,10 @@ const materialsDropdown = document.getElementById('material-dropdowns');
 const materialsImage = document.getElementById('materials-image');
 const materialsCountEl = document.getElementById('material-count');
 
+const doorsDropdown = document.getElementById('door-dropdowns');
+const doorsImage = document.getElementById('doors-image');
+const doorsCountEl = document.getElementById('door-count');
+
 const mottoButton = document.getElementById('motto-button');
 const mottoInputEl = document.getElementById('motto-input');
 const mottosEl = document.getElementById('mottos');
@@ -31,6 +35,12 @@ materialsDropdown.addEventListener('change', () => {
     displayStats();
 });
 
+doorsDropdown.addEventListener('change', () => {
+    doorsImage.src = makeImageURL('doors', doorsDropdown.value);
+    doorsCount++;
+    displayStats();
+});
+
 mottoButton.addEventListener('click', () => {
     mottos.push(mottoInputEl.value);
 
@@ -45,6 +55,7 @@ function makeImageURL(location, value) {
 function displayStats() {
     roofCountEl.textContent = roofCount;
     materialsCountEl.textContent = materialsCount;
+    doorsCountEl.textContent = doorsCount;
 }
 
 function displayMottos() {
